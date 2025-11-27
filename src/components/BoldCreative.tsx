@@ -1,6 +1,35 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 export const BoldCreative: React.FC = () => {
+  const expRef = useRef(null);
+  const [years, setYears] = useState(0);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          startCounting(15); 
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.4 }
+    );
+
+    if (expRef.current) observer.observe(expRef.current);
+  }, []);
+
+  const startCounting = (target) => {
+    let count = 0;
+    const speed = 50; // lower = faster
+
+    const interval = setInterval(() => {
+      count++;
+      setYears(count);
+
+      if (count === target) clearInterval(interval);
+    }, speed);
+  };
+
   return (
     <>
       {/* We are Bold & Creative Section */}
@@ -59,18 +88,18 @@ export const BoldCreative: React.FC = () => {
                 <p>
                   At MITS Digital Infotech, we are a full-stack digital agency
                   driven by innovation and creativity. With expertise in web
-                  development, SEO, social media marketing, and brand strategy, we
-                  help businesses thrive in the digital world.
+                  development, SEO, social media marketing, and brand strategy,
+                  we help businesses thrive in the digital world.
                 </p>
                 <p>
-                  We blend technology, design, and marketing to craft experiences
-                  that engage and convert. From SEO strategies to creative
-                  branding, we deliver results that align with your go-to place
-                  for tech digital growth.
+                  We blend technology, design, and marketing to craft
+                  experiences that engage and convert. From SEO strategies to
+                  creative branding, we deliver results that align with your
+                  go-to place for tech digital growth.
                 </p>
                 <p>
-                  Our mission is to deliver success, built and solve that not only
-                  solve challenges but also unlock new opportunities.
+                  Our mission is to deliver success, built and solve that not
+                  only solve challenges but also unlock new opportunities.
                 </p>
               </div>
 
@@ -110,13 +139,18 @@ export const BoldCreative: React.FC = () => {
                   "Agile, Collaborative, and Client-Centric",
                   "Proven Industry Experience",
                   "End-to-End Project Ownership",
-                  "Where Creativity Meets Technology"
+                  "Where Creativity Meets Technology",
                 ].map((item, idx) => (
-                  <div key={idx} className="border-b border-gray-100 py-6 flex items-center justify-between group cursor-pointer">
+                  <div
+                    key={idx}
+                    className="border-b border-gray-100 py-6 flex items-center justify-between group cursor-pointer"
+                  >
                     <h3 className="text-xl font-semibold text-gray-700 group-hover:text-black transition">
                       {item}
                     </h3>
-                    <span className="opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition duration-300">→</span>
+                    <span className="opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition duration-300">
+                      →
+                    </span>
                   </div>
                 ))}
               </div>
@@ -128,10 +162,24 @@ export const BoldCreative: React.FC = () => {
                 {/* Expertise Teams */}
                 <div>
                   <div className="flex -space-x-4 mb-6">
-                     <img className="w-16 h-16 rounded-full border-4 border-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&q=80" alt="Team" />
-                     <img className="w-16 h-16 rounded-full border-4 border-white object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&q=80" alt="Team" />
-                     <img className="w-16 h-16 rounded-full border-4 border-white object-cover" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&q=80" alt="Team" />
-                     <div className="w-16 h-16 rounded-full border-4 border-white bg-black text-white flex items-center justify-center font-bold text-sm">+20</div>
+                    <img
+                      className="w-16 h-16 rounded-full border-4 border-white object-cover"
+                      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&q=80"
+                      alt="Team"
+                    />
+                    <img
+                      className="w-16 h-16 rounded-full border-4 border-white object-cover"
+                      src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&q=80"
+                      alt="Team"
+                    />
+                    <img
+                      className="w-16 h-16 rounded-full border-4 border-white object-cover"
+                      src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&q=80"
+                      alt="Team"
+                    />
+                    <div className="w-16 h-16 rounded-full border-4 border-white bg-black text-white flex items-center justify-center font-bold text-sm">
+                      +20
+                    </div>
                   </div>
                   <p className="text-sm font-semibold text-gray-600 mb-2 uppercase tracking-wide">
                     Expertise teams
@@ -140,8 +188,11 @@ export const BoldCreative: React.FC = () => {
                 </div>
 
                 {/* Years of Experience */}
-                <div>
-                  <p className="text-[10rem] leading-none font-bold text-gray-400 mb-[-2rem] select-none">15+</p>
+                <div ref={expRef}>
+                  <p className="text-[10rem] leading-none font-bold text-gray-400 mb-[-2rem] select-none">
+                    {years}+
+                  </p>
+
                   <div className="bg-black text-white px-8 py-4 inline-block relative z-10 rounded-r-full">
                     <p className="text-xl font-bold">Years of experience</p>
                   </div>

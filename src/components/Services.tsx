@@ -19,15 +19,15 @@ export const Services: React.FC = () => {
             </div>
             <div className="lg:pt-4">
               <p className="text-gray-600 mb-6 text-lg">
-                We specialize in SEO, social media marketing, content
-                strategy, and performance-based digital solutions.
+                We specialize in SEO, social media marketing, content strategy,
+                and performance-based digital solutions.
               </p>
               <div className="space-y-3">
                 {[
                   "Increased Website Traffic",
                   "Higher Search Rankings",
                   "Improved Conversion Rates",
-                  "Sales"
+                  "Sales",
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <span className="text-gray-400">→</span>
@@ -44,20 +44,23 @@ export const Services: React.FC = () => {
         {/* Services List */}
         <div className="space-y-6">
           {SERVICES_DATA.map((service, index) => (
-            <div key={index} className="bg-white p-8 md:p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100">
+            <div
+              key={index}
+              className="bg-white p-8 md:p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100"
+            >
               <div className="grid md:grid-cols-12 gap-8 items-center">
                 <div className="md:col-span-1">
                   <span className="text-2xl font-bold text-gray-300 group-hover:text-black transition-colors">
-                    {String(index + 1).padStart(2, '0')}
+                    {String(index + 1).padStart(2, "0")}
                   </span>
                 </div>
                 <div className="md:col-span-4">
-                  <h3 className="text-2xl font-bold mb-2 group-hover:text-blue-600 transition-colors">{service.title}</h3>
+                  <h3 className="text-2xl font-bold mb-2 group-hover:text-blue-600 transition-colors">
+                    {service.title}
+                  </h3>
                 </div>
                 <div className="md:col-span-4">
-                  <p className="text-gray-600">
-                    {service.description}
-                  </p>
+                  <p className="text-gray-600">{service.description}</p>
                 </div>
                 <div className="md:col-span-3 flex justify-end items-center gap-6">
                   <div className="w-32 h-20 bg-gray-100 rounded-lg overflow-hidden relative">
@@ -79,11 +82,21 @@ export const Services: React.FC = () => {
         {/* Bottom CTA */}
         <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-6">
           <div className="flex -space-x-3">
-            {[1,2,3].map(i => (
-                <div key={i} className="w-12 h-12 rounded-full bg-gray-200 border-4 border-gray-50 flex items-center justify-center overflow-hidden">
-                    <img src={`https://picsum.photos/100/100?random=${i}`} alt="user" className="w-full h-full object-cover"/>
-                </div>
-            ))}
+            <img
+              className="w-16 h-16 rounded-full border-4 border-white object-cover"
+              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&q=80"
+              alt="Team"
+            />
+            <img
+              className="w-16 h-16 rounded-full border-4 border-white object-cover"
+              src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&q=80"
+              alt="Team"
+            />
+            <img
+              className="w-16 h-16 rounded-full border-4 border-white object-cover"
+              src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&q=80"
+              alt="Team"
+            />
           </div>
           <button className="bg-black text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-800 transition shadow-lg hover:shadow-xl">
             Contact us Now

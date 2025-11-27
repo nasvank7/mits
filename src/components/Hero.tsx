@@ -119,9 +119,21 @@ export const Hero: React.FC = () => {
 
             <div className="flex items-center gap-4">
               <div className="flex -space-x-3">
-                <div className="w-10 h-10 rounded-full bg-blue-500 border-2 border-gray-900 flex items-center justify-center text-sm shadow-md">👨</div>
-                <div className="w-10 h-10 rounded-full bg-purple-500 border-2 border-gray-900 flex items-center justify-center text-sm shadow-md">👩</div>
-                <div className="w-10 h-10 rounded-full bg-pink-500 border-2 border-gray-900 flex items-center justify-center text-sm shadow-md">👨</div>
+                  <img
+                      className="w-16 h-16 rounded-full border-4 border-white object-cover"
+                      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&q=80"
+                      alt="Team"
+                    />
+                    <img
+                      className="w-16 h-16 rounded-full border-4 border-white object-cover"
+                      src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&q=80"
+                      alt="Team"
+                    />
+                    <img
+                      className="w-16 h-16 rounded-full border-4 border-white object-cover"
+                      src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&q=80"
+                      alt="Team"
+                    />
               </div>
               <div>
                 <div className="flex items-center gap-2">
