@@ -3,7 +3,7 @@ import React from "react";
 export const Testimonials: React.FC = () => {
   return (
     <>
-      {/* Parallax / Innovate Banner */}
+   
       <section className="relative py-40 px-4 text-white overflow-hidden bg-fixed bg-cover bg-center" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80")' }}>
         <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]"></div>
         <div className="max-w-7xl mx-auto relative z-10">

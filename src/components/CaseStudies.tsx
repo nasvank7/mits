@@ -18,7 +18,7 @@ export const CaseStudies: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-1">
-            {/* Item 1 */}
+      
             <div className="group relative h-[500px] overflow-hidden bg-black">
                 <img 
                     src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" 
@@ -33,7 +33,7 @@ export const CaseStudies: React.FC = () => {
                 </div>
             </div>
 
-            {/* Item 2 */}
+          
             <div className="group relative h-[500px] overflow-hidden bg-black">
                 <img 
                     src="https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?w=600&q=80" 
@@ -48,7 +48,6 @@ export const CaseStudies: React.FC = () => {
                 </div>
             </div>
 
-            {/* Item 3 */}
             <div className="group relative h-[500px] overflow-hidden bg-black">
                 <img 
                     src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80" 

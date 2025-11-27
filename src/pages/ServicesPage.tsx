@@ -8,15 +8,15 @@ import { SERVICES_PAGE_FAQS } from "../constants";
 export const ServicesPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Banner - Consistent with Contact Page */}
+     
       <section className="bg-black text-white pt-40 pb-24 px-4 relative overflow-hidden">
-        {/* Abstract Background */}
+     
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-gray-900 via-black to-black opacity-90"></div>
-            {/* Colorful blurred orbs */}
+           
             <div className="absolute -top-20 -left-20 w-96 h-96 bg-purple-600/30 rounded-full blur-[100px]"></div>
             <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-orange-600/20 rounded-full blur-[120px]"></div>
-            {/* Light streaks */}
+          
             <div className="absolute top-0 right-1/4 w-[1px] h-full bg-gradient-to-b from-transparent via-white/10 to-transparent transform rotate-12"></div>
             <div className="absolute top-0 left-1/3 w-[1px] h-full bg-gradient-to-b from-transparent via-white/5 to-transparent transform -rotate-6"></div>
         </div>
@@ -30,7 +30,7 @@ export const ServicesPage: React.FC = () => {
              <h1 className="text-5xl md:text-7xl font-bold tracking-tight">Our services</h1>
            </div>
            
-           {/* Decorative circle/dot */}
+          
            <div className="hidden md:block mb-4">
               <div className="w-12 h-12 rounded-full border border-gray-700 flex items-center justify-center">
                   <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
@@ -39,7 +39,7 @@ export const ServicesPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Intro Section */}
+ 
       <section className="py-24 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
              <div className="mb-8">
@@ -66,7 +66,7 @@ export const ServicesPage: React.FC = () => {
       {/* Detailed Services List */}
       <DetailedServices />
 
-      {/* Parallax / Innovate Banner */}
+    
       <section className="relative h-[600px] flex items-center px-4 text-white overflow-hidden bg-fixed bg-cover bg-center" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80")' }}>
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="max-w-7xl mx-auto relative z-10 w-full">

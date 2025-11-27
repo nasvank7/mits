@@ -27,13 +27,13 @@ export const ContactPage: React.FC = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Banner */}
       <section className="bg-black text-white pt-40 pb-24 px-4 relative overflow-hidden">
-        {/* Abstract Abstract Background */}
+      
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-gray-900 via-black to-black opacity-90"></div>
-            {/* Colorful blurred orbs */}
+           
             <div className="absolute -top-20 -left-20 w-96 h-96 bg-blue-600/30 rounded-full blur-[100px]"></div>
             <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[120px]"></div>
-            {/* Light streaks */}
+        
             <div className="absolute top-0 right-1/4 w-[1px] h-full bg-gradient-to-b from-transparent via-white/10 to-transparent transform rotate-12"></div>
             <div className="absolute top-0 left-1/3 w-[1px] h-full bg-gradient-to-b from-transparent via-white/5 to-transparent transform -rotate-6"></div>
         </div>
@@ -46,8 +46,7 @@ export const ContactPage: React.FC = () => {
              </div>
              <h1 className="text-5xl md:text-7xl font-bold tracking-tight">Contact us</h1>
            </div>
-           
-           {/* Decorative circle/dot */}
+       
            <div className="hidden md:block mb-4">
               <div className="w-12 h-12 rounded-full border border-gray-700 flex items-center justify-center">
                   <div className="w-2 h-2 bg-gray-500 rounded-full"></div>

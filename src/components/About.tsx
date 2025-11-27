@@ -67,12 +67,12 @@ export const About: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Content - Timeline Grid */}
+          {/* Right Content*/}
           <div className="relative">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
               {capabilities.map((item, index) => (
                 <div key={item.id} className="relative pl-8 group">
-                  {/* Vertical Line with Animation */}
+                
                   <div className="absolute left-0 top-0 bottom-0 w-[1px] bg-gray-200 overflow-hidden">
                     <div
                       className="w-full h-20 bg-black animate-marquee-line"

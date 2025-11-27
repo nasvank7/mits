@@ -8,14 +8,14 @@ export const Hero: React.FC = () => {
       id="home"
       className="relative min-h-screen flex items-center px-4 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white overflow-hidden pt-24 md:pt-0"
     >
-      {/* Background Images / Gradients */}
+   
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="absolute left-0 top-0 w-1/2 h-full bg-gradient-to-r from-blue-900/20 to-transparent"></div>
         <div className="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-purple-900/20 to-transparent"></div>
       </div>
 
       <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center relative z-10 py-12 md:py-20">
-        {/* Video Section - Left (Swapped order on mobile usually, but keeping layout) */}
+       
         <div className="order-2 md:order-1">
           <div
             className="relative group cursor-pointer transition-transform duration-500 hover:scale-[1.02]"
