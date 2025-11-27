@@ -18,9 +18,9 @@ export const BoldCreative: React.FC = () => {
     if (expRef.current) observer.observe(expRef.current);
   }, []);
 
-  const startCounting = (target) => {
+  const startCounting = (target:number) => {
     let count = 0;
-    const speed = 50; // lower = faster
+    const speed = 50; 
 
     const interval = setInterval(() => {
       count++;
